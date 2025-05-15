@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abonnements - GymFit</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .pricing-hero {
+            height: 50vh;
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+                        url('https://images.unsplash.com/photo-1534438327276-14e5300c3a48?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: var(--white);
+            margin-top: 80px;
+        }
+
+        .pricing-section {
+            padding: 5rem 1rem;
+            background-color: var(--light-bg);
+        }
+
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem 0;
+        }
+
+        .pricing-card {
+            background: var(--white);
+            border-radius: 10px;
+            padding: 2rem;
+            text-align: center;
+            box-shadow: var(--shadow);
+            transition: transform 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .pricing-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .pricing-card.popular::before {
+            content: "Populaire";
+            position: absolute;
+            top: 20px;
+            right: -35px;
+            background: var(--primary-color);
+            color: var(--white);
+            padding: 0.5rem 3rem;
+            transform: rotate(45deg);
+            font-size: 0.9rem;
+            font-weight: bold;
+        }
+
+        .pricing-card h2 {
+            color: var(--secondary-color);
+            margin-bottom: 1rem;
+            font-size: 1.8rem;
+        }
+
+        .price {
+            font-size: 3rem;
+            color: var(--primary-color);
+            margin-bottom: 1.5rem;
+            font-weight: bold;
+        }
+
+        .price span {
+            font-size: 1rem;
+            color: #666;
+        }
+
+        .features-list {
+            list-style: none;
+            margin: 2rem 0;
+        }
+
+        .features-list li {
+            padding: 0.8rem 0;
+            border-bottom: 1px solid #eee;
+            color: #666;
+        }
+
+        .features-list li:last-child {
+            border-bottom: none;
+        }
+
+        .features-list li i {
+            color: var(--primary-color);
+            margin-right: 0.5rem;
+        }
+
+        .pricing-button {
+            display: inline-block;
+            padding: 1rem 2rem;
+            background-color: var(--primary-color);
+            color: var(--white);
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+            width: 100%;
+        }
+
+        .pricing-button:hover {
+            background-color: #ff3333;
+        }
+
+        .pricing-info {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem 0;
+        }
+
+        .pricing-info h2 {
+            color: var(--secondary-color);
+            margin-bottom: 1rem;
+        }
+
+        .pricing-info p {
+            color: #666;
+            line-height: 1.8;
+        }
+
+        @media (max-width: 768px) {
+            .pricing-grid {
+                grid-template-columns: 1fr;
+                max-width: 400px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">GymFit</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="abonnement.html" class="active">Abonnements</a></li>
+                <li><a href="about.html">À propos</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="admin.html">Admin</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="pricing-hero">
+        <div class="hero-content">
+            <h1>Nos Abonnements</h1>
+            <p>Choisissez l'offre qui correspond à vos besoins</p>
+        </div>
+    </section>
+
+    <section class="pricing-section">
+        <div class="pricing-grid">
+            <div class="pricing-card">
+                <h2>Basique</h2>
+                <div class="price">19 000 FCFA<span>/mois</span></div>
+                <ul class="features-list">
+                    <li><i class="fas fa-check"></i> Accès à la salle de musculation</li>
+                    <li><i class="fas fa-check"></i> Accès aux équipements cardio</li>
+                    <li><i class="fas fa-check"></i> Horaires d'ouverture standards</li>
+                    <li><i class="fas fa-check"></i> Programme d'entraînement de base</li>
+                </ul>
+                <a href="#" class="pricing-button">Choisir ce plan</a>
+            </div>
+
+            <div class="pricing-card popular">
+                <h2>Premium</h2>
+                <div class="price">32 000 FCFA<span>/mois</span></div>
+                <ul class="features-list">
+                    <li><i class="fas fa-check"></i> Tout du plan Basique</li>
+                    <li><i class="fas fa-check"></i> Accès illimité aux cours collectifs</li>
+                    <li><i class="fas fa-check"></i> Accès aux zones VIP</li>
+                    <li><i class="fas fa-check"></i> 2 séances de coaching par mois</li>
+                    <li><i class="fas fa-check"></i> Accès au spa et sauna</li>
+                </ul>
+                <a href="#" class="pricing-button">Choisir ce plan</a>
+            </div>
+
+            <div class="pricing-card">
+                <h2>Elite</h2>
+                <div class="price">52 000 FCFA<span>/mois</span></div>
+                <ul class="features-list">
+                    <li><i class="fas fa-check"></i> Tout du plan Premium</li>
+                    <li><i class="fas fa-check"></i> Coaching personnel illimité</li>
+                    <li><i class="fas fa-check"></i> Programme nutritionnel personnalisé</li>
+                    <li><i class="fas fa-check"></i> Accès 24/7</li>
+                    <li><i class="fas fa-check"></i> Invité gratuit pour les cours</li>
+                </ul>
+                <a href="#" class="pricing-button">Choisir ce plan</a>
+            </div>
+        </div>
+
+        <div class="pricing-info">
+            <h2>Informations importantes</h2>
+            <p>Tous nos abonnements incluent l'accès à nos installations de pointe, le wifi gratuit, et l'utilisation des vestiaires. Des frais d'inscription de 5000 Frcs CFA s'appliquent pour tous les nouveaux membres.</p>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>GymFit</h3>
+                <p>Votre partenaire fitness depuis 2010</p>
+            </div>
+            <div class="footer-section">
+                <h3>Horaires d'ouverture</h3>
+                <p>Lundi - Vendredi: 6h - 22h</p>
+                <p>Samedi - Dimanche: 8h - 20h</p>
+            </div>
+            <div class="footer-section">
+                <h3>Contact</h3>
+                <p>Email: contact@gymfit.tg</p>
+                <p>Tél:+ 228 91 03 85 36 </p>
+            </div>
+            <div class="footer-section">
+                <h3>Suivez-nous</h3>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 GymFit. Tous droits réservés.</p>
+        </div>
+    </footer>
+</body>
+</html> 

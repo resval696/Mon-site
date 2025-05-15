@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services - Gymnova</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .services-hero {
+            height: 50vh;
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+                        url('https://images.unsplash.com/photo-1534438327276-14e5300c3a48?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: var(--white);
+            margin-top: 80px;
+        }
+
+        .service-details {
+            padding: 5rem 1rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .service-card {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            margin-bottom: 5rem;
+            align-items: center;
+        }
+
+        .service-card:nth-child(even) {
+            direction: rtl;
+        }
+
+        .service-card:nth-child(even) .service-content {
+            direction: ltr;
+        }
+
+        .service-image {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+            border-radius: 10px;
+            box-shadow: var(--shadow);
+        }
+
+        .service-content {
+            padding: 2rem;
+        }
+
+        .service-content h2 {
+            color: var(--secondary-color);
+            margin-bottom: 1rem;
+            font-size: 2rem;
+        }
+
+        .service-content p {
+            margin-bottom: 1.5rem;
+            color: #666;
+            line-height: 1.8;
+        }
+
+        .service-features {
+            list-style: none;
+        }
+
+        .service-features li {
+            margin-bottom: 0.5rem;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+
+        .service-features li::before {
+            content: "✓";
+            color: var(--primary-color);
+            position: absolute;
+            left: 0;
+        }
+
+        @media (max-width: 768px) {
+            .service-card {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .service-card:nth-child(even) {
+                direction: ltr;
+            }
+
+            .service-image {
+                height: 300px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">Gymnova</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="services.html" class="active">Services</a></li>
+                <li><a href="abonnement.html">Abonnements</a></li>
+                <li><a href="about.html">À propos</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="admin.html">Admin</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="services-hero">
+        <div class="hero-content">
+            <h1>Nos Services</h1>
+            <p>Découvrez notre gamme complète de services fitness</p>
+        </div>
+    </section>
+
+    <main class="service-details">
+        <div class="service-card">
+            <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Musculation" class="service-image">
+            <div class="service-content">
+                <h2>Musculation</h2>
+                <p>Notre espace musculation est équipé des dernières technologies pour vous aider à atteindre vos objectifs. Que vous soyez débutant ou confirmé, nos coachs vous accompagnent dans votre progression.</p>
+                <ul class="service-features">
+                    <li>Équipements de dernière génération</li>
+                    <li>Programmes personnalisés</li>
+                    <li>Coaching individuel</li>
+                    <li>Suivi de progression</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="service-card">
+            <img src="https://images.unsplash.com/photo-1518611012118-696072aa579a?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Cardio" class="service-image">
+            <div class="service-content">
+                <h2>Cardio Training</h2>
+                <p>Notre zone cardio vous offre un large choix d'équipements pour améliorer votre endurance et votre condition physique générale.</p>
+                <ul class="service-features">
+                    <li>Tapis de course dernière génération</li>
+                    <li>Vélos elliptiques</li>
+                    <li>Rameurs</li>
+                    <li>Vélos stationnaires</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="service-card">
+            <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Yoga" class="service-image">
+            <div class="service-content">
+                <h2>Yoga & Pilates</h2>
+                <p>Nos salles dédiées au yoga et au pilates vous offrent un espace paisible pour travailler votre corps et votre esprit.</p>
+                <ul class="service-features">
+                    <li>Classes pour tous niveaux</li>
+                    <li>Instructeurs certifiés</li>
+                    <li>Matériel fourni</li>
+                    <li>Ambiance zen</li>
+                </ul>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Gymnova</h3>
+                <p>Votre partenaire fitness depuis 2010</p>
+            </div>
+            <div class="footer-section">
+                <h3>Horaires d'ouverture</h3>
+                <p>Lundi - Vendredi: 6h - 22h</p>
+                <p>Samedi - Dimanche: 8h - 20h</p>
+            </div>
+            <div class="footer-section">
+                <h3>Contact</h3>
+                <p>Email: contact@gymnova.tg</p>
+                <p>Tél: +228 91 03 85 36</p>
+            </div>
+            <div class="footer-section">
+                <h3>Suivez-nous</h3>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Gymnova. Tous droits réservés.</p>
+        </div>
+    </footer>
+</body>
+</html> 
